@@ -26,6 +26,7 @@ Nouns DAO generates and auctions one Noun NFT every 24 hours, forever. 100% of a
 | `scripts/vote.sh` | `<proposal_id> <support> [reason]` | Cast a vote (0=Against, 1=For, 2=Abstain) |
 | `scripts/propose.sh` | `<target> <value_wei> <signature> <calldata_hex> <description>` | Submit a single-action proposal |
 | `scripts/create-candidate.sh` | `<target> <value_wei> <signature> <calldata_hex> <description> <slug>` | Create a proposal candidate |
+| `scripts/update-candidate.sh` | `<target> <value_wei> <signature> <calldata_hex> <description> <slug> <reason>` | Update an existing proposal candidate |
 | `scripts/delegate.sh` | `<delegatee_address>` | Delegate voting power to an address |
 
 ## Contracts (Ethereum mainnet, chain ID 1)
@@ -129,6 +130,7 @@ For detailed governance mechanics, see [references/governance.md](references/gov
 |----------|----------|--------|---------|
 | `createCandidateCost()` | `0x628ff474` | - | uint256 (ETH cost in wei for non-Nouners) |
 | `createProposalCandidate(...)` | `0x615e4ef9` | targets + values + sigs + calldatas + description + slug + proposalIdToUpdate | (write, payable) |
+| `updateProposalCandidate(...)` | `0x848ea72f` | same as create + reason | (write, payable) |
 | `cancelProposalCandidate(string)` | `0x2a03c079` | slug | (write) |
 | `sendFeedback(uint256,uint8,string)` | `0xff4ca184` | proposalId + support + reason | (write) |
 
