@@ -27,6 +27,7 @@ Nouns DAO generates and auctions one Noun NFT every 24 hours, forever. 100% of a
 | `scripts/propose.sh` | `<target> <value_wei> <signature> <calldata_hex> <description>` | Submit a single-action proposal |
 | `scripts/create-candidate.sh` | `<target> <value_wei> <signature> <calldata_hex> <description> <slug>` | Create a proposal candidate |
 | `scripts/update-candidate.sh` | `<target> <value_wei> <signature> <calldata_hex> <description> <slug> <reason>` | Update an existing proposal candidate |
+| `scripts/cancel-candidate.sh` | `<slug>` | Cancel a proposal candidate |
 | `scripts/delegate.sh` | `<delegatee_address>` | Delegate voting power to an address |
 
 ## Contracts (Ethereum mainnet, chain ID 1)
